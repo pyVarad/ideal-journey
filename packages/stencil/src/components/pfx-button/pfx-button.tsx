@@ -5,7 +5,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
   styleUrl: 'pfx-button.css',
   shadow: true,
 })
-export class PfxButtonComponent {
+export class ButtonComponent {
 
   /*
   * Button Type
