@@ -1,0 +1,39 @@
+{
+  "name": "design-system-impl",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Design System",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "ts-node ./bin/clean.ts",
+    "build": "yarn build:stencil && yarn build:angular && yarn build:react",
+    "lint": "yarn lint:stencil",
+    "build:stencil": "yarn --cwd packages/stencil build",
+    "build:angular": "yarn --cwd packages/angular build",
+    "build:react": "yarn --cwd packages/react build",
+    "lint:stencil": "yarn --cwd packages/stencil lint",
+    "start": "yarn --cwd packages/stencil start"
+  },
+  "keywords": [
+    "StencilJS"
+  ],
+  "author": "Varad A G",
+  "engines": {
+    "node": ">=18.6.0"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.46.0",
+    "eslint-plugin-react": "^7.33.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "typescript-logging": "^2.1.0",
+    "typescript-logging-log4ts-style": "^2.1.0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@pfx/react",
+  "version": "1.0.0",
+  "description": "React Design System Components",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "test": "node ./__tests__/react-library.test.js",
+    "build": "npm run tsc",
+    "tsc": "tsc -p . --outDir ./dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "React",
+    "Design System"
+  ],
+  "author": "Varad A G",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^18.2.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6",
+    "stencil": "*"
+  }
+}
