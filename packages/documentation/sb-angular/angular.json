@@ -104,7 +104,7 @@
               "-d",
               "."
             ],
-            "port": 6006
+            "port": 6007
           }
         },
         "build-storybook": {
