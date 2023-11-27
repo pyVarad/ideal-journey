@@ -12,6 +12,10 @@ const cleanupFilesAndFolders = [
     path.join(packagesFolder, 'angular', 'node_modules'),
     path.join(packagesFolder, 'stencil', 'dist'),
     path.join(packagesFolder, 'stencil', 'node_modules'),
+    path.join(packagesFolder, 'react', 'dist'),
+    path.join(packagesFolder, 'react', 'node_modules'),
+    path.join(packagesFolder, 'documentation', 'react', 'node_modules'),
+    path.join(packagesFolder, 'documentation', 'sb-angular', 'node_modules'),
 ];
 
 cleanupFilesAndFolders.forEach(
