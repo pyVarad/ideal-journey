@@ -23,12 +23,12 @@ export const config: Config = {
     },
     angularOutputTarget({
       componentCorePackage: '@pfx/core',
-      directivesProxyFile: '../angular/projects/pfx-angular/src/lib/directives/components.ts',
-      directivesArrayFile: '../angular/projects/pfx-angular/src/lib/directives/index.ts',
+      directivesProxyFile: '../angular-library/projects/pfx-angular/src/lib/directives/components.ts',
+      directivesArrayFile: '../angular-library/projects/pfx-angular/src/lib/directives/index.ts',
     }),
     reactOutputTarget({
       componentCorePackage: '@pfx/core',
-      proxiesFile: '../react/src/components/index.ts',
+      proxiesFile: '../react-library/src/components/index.ts',
       includeDefineCustomElements: true,
       includePolyfills: true
     })

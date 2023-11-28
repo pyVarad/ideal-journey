@@ -25,7 +25,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../../stencil-library/src/components/pfx-button/pfx-button.css"
             ],
             "scripts": []
           },

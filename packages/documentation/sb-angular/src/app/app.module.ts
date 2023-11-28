@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ComponentLibraryModule, PfxButton } from '@pfx/angular';
+import { AngularComponentLibrary, PfxButton } from '@pfx/angular';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { ComponentLibraryModule, PfxButton } from '@pfx/angular';
   ],
   imports: [
     BrowserModule,
-    ComponentLibraryModule
+    AngularComponentLibrary
   ],
   providers: [],
   bootstrap: [AppComponent],

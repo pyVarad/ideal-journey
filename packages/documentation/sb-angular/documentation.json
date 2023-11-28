@@ -78,7 +78,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-d5aa73160f949af891b4e69772c05ecbdfabc600d1d45c2023e1e93456ebf93ce0e23aea8f09450d67a7f2e0be8dca933fcd7390c0d912f2f95fff95d761a627",
+            "id": "component-ButtonComponent-3d482f855d7a3e5923f90de87efdfc052f567ea88964d622d19cae042a3498f7a8a750933e465ad98872ff9a587c453b49650b3124134ae41871249bef48e41d",
             "file": "src/stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -90,7 +90,7 @@
                 "./button.css"
             ],
             "styles": [],
-            "template": "<pfx-button>Button</pfx-button>",
+            "template": "<pfx-button buttontype='callToAction'>Button</pfx-button>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -105,14 +105,18 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "ComponentLibraryModule",
+                    "name": "AngularComponentLibrary",
                     "type": "component"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component } from '@angular/core';\nimport { ComponentLibraryModule } from '@pfx/angular';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [ComponentLibraryModule],\n  standalone: true,\n  template: `<pfx-button>Button</pfx-button>`,\n  styleUrls: ['./button.css']\n})\nexport default class ButtonComponent {\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component } from '@angular/core';\nimport { AngularComponentLibrary } from '@pfx/angular';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [AngularComponentLibrary, CommonModule],\n  standalone: true,\n  template: `<pfx-button buttontype='callToAction'>Button</pfx-button>`,\n  styleUrls: ['./button.css']\n})\nexport default class ButtonComponent {\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -127,13 +131,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-38107bd56499b379ea8d1f3866538a7eae8122fe1172daf7ba2341f6aa63c0829299ff0361d95682b13d092497159e386ee47d0b3e823489ffe1ebbb00d902ee",
+            "id": "module-AppModule-7991dcb7c79a456f62cd9c39a6b4c164b1f320edef6c607ee352073d1d73f09020c902423a65a657e1563867dee191ddce2099bd831dcc77288e327f33d66378",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { ComponentLibraryModule, PfxButton } from '@pfx/angular';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    ComponentLibraryModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent],\n  schemas: [CUSTOM_ELEMENTS_SCHEMA]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { AngularComponentLibrary, PfxButton } from '@pfx/angular';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AngularComponentLibrary\n  ],\n  providers: [],\n  bootstrap: [AppComponent],\n  schemas: [CUSTOM_ELEMENTS_SCHEMA]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",

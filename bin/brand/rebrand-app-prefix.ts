@@ -6,8 +6,8 @@ import { getLogger } from '../utils/logConfig';
 const log = getLogger('model.RenamePackagePrefix')
 
 const rootPath = path.join(__dirname, '..', '..');
-const stencilPackagePath = path.join(rootPath, 'packages', 'stencil', 'src');
-const angularPackagePath = path.join(rootPath, 'packages', 'angular', 'projects');
+const stencilPackagePath = path.join(rootPath, 'packages', 'stencil-library', 'src');
+const angularPackagePath = path.join(rootPath, 'packages', 'angular-library', 'projects');
 const fileOperations = new FileOperations();
 
 /* Prefix and Packages to change. 
@@ -42,7 +42,7 @@ export class BaseReBranding {
 
     writeFile = (absoluteFilePathWithName: string, data: string) => {
         if (!fileOperations.checkIfPathExists(absoluteFilePathWithName)) {
-            fs.writeFileSync(absoluteFilePathWithName, data, {encoding:'utf8',flag:'w'});
+            fs.writeFileSync(absoluteFilePathWithName, data, { encoding: 'utf8', flag: 'w' });
         }
     }
 
@@ -72,8 +72,8 @@ export class BaseReBranding {
                 let data = this.readFile(file);
                 const preFixStrPattern = new RegExp(srcPackage, 'g');
                 data = this.stringReplace(
-                    data.replaceAll(preFixStrPattern, targetPackage), 
-                    srcPrefix, 
+                    data.replaceAll(preFixStrPattern, targetPackage),
+                    srcPrefix,
                     targetPrefix
                 );
                 fileOperations.removeFilesAndFolders(file);
@@ -115,7 +115,7 @@ export class BaseReBranding {
 
 export class ProcessStencilPackage extends BaseReBranding {
     replacePackageNamesOnFolders = ['stencil.config.ts', 'package.json'].map(
-        file => path.join(rootPath, 'packages', 'stencil', file)
+        file => path.join(rootPath, 'packages', '-library', file)
     );
 }
 

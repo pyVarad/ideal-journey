@@ -6,7 +6,12 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
-    "types": []
+    "types": [],
+    "paths": {
+      "@pfx/angular": [
+        "../../../stencil-library/dist"
+      ]
+    }
   },
   "exclude": [
     "**/*.spec.ts"

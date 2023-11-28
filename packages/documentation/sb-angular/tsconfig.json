@@ -26,7 +26,12 @@
     ],
     "types": [
       "node"
-    ]
+    ],
+    "paths": {
+      "@pfx/angular": [
+        "../../angular-library/dist/pfx-angular"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
